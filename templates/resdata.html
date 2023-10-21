@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Res Data</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <a href="/">返回</a>
+    </div>
+    <h1>Res Data</h1>
+    
+    <table>
+        <thead>
+            {% for item in table_title %}
+                <th>{{ item }}</th>
+            {% endfor %}
+        </thead>
+        <!-- {!! table_html | safe !!} -->
+        <!-- {{table_html | safe}} -->
+
+        <!-- 注意：我们使用了 `safe` 过滤器来显示原始的 HTML 内容，以避免转义 -->
+        <tbody>
+            {% for item in new_table_list %}
+                <tr>
+                    <td>{{item.num}}</td>
+                    <td>{{item.oldtext}}</td>
+                    <td>{{item.name}}</td>
+                    <td>{{item.phone}}</td>
+                    <td>{{item.pro}}</td>
+                    <td>{{item.city}}</td>
+                    <td>{{item.address}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

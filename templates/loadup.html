@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>文件上传</title>
+  </head>
+  <style>
+    table{
+      border: 1px;
+    }
+    .card {
+      width: 300px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      text-align: center;
+      margin-top: 5%;
+      margin-bottom: 5%;
+      background-color: #fff;
+    }
+    
+    .card h2 {
+      margin-top: 0;
+    }
+    
+    .card button {
+      margin-top: 10px;
+    }
+
+    body {
+      background-color: #F4F2EE; /* 护眼背景色 */
+    }
+  </style>
+  <body>
+    <div class="card">
+      <h2>上传文件</h2>
+      <form action="/resdata" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".xlsx">
+        <button type="submit">上传</button>
+      </form>
+    </div>
+    <div>
+      <p>1、上传一个文档，请把数据放在第一个文档的第一列！</p>
+      <p>2、已GET类型请求<a href="/getinfo">/getinfo</a>传入一个text作为参数！示例：<a href="/getinfo?text=云南省曲靖市富源县墨红镇XXX，XXXX，01234567890">/getinfo?text=云南省曲靖市富源县墨红镇XXX，XXXX，01234567890</a></p>
+      <p>3、返回数据为：{"name": "XXXX", "phone": "01234567890", "address": "云南省曲靖市富源县墨红镇XXX", "pro": "云南", "city": "曲靖"}</p>
+      <table>
+        <tr>
+          <th>参数</th>
+          <th>值</th>
+        </tr>
+        <tr>
+          <td>name</td>
+          <td>名称</td>
+        </tr>
+        <tr>
+          <td>phone</td>
+          <td>号码</td>
+        </tr>
+        <tr>
+          <td>address</td>
+          <td>详细地址</td>
+        </tr>
+        <tr>
+          <td>pro</td>
+          <td>省份</td>
+        </tr>
+        <tr>
+          <td>city</td>
+          <td>城市</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
