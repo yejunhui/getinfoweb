@@ -34,14 +34,14 @@
   <body>
     <div class="card">
       <h2>上传文件</h2>
-      <form action="/resdata" method="post" enctype="multipart/form-data">
+      <form action="resdata" method="post" enctype="multipart/form-data">
         <input type="file" name="file" accept=".xlsx">
         <button type="submit">上传</button>
       </form>
     </div>
     <div>
       <p>1、上传一个文档，请把数据放在第一个文档的第一列！</p>
-      <p>2、已GET类型请求<a href="/getinfo">/getinfo</a>传入一个text作为参数！示例：<a href="/getinfo?text=云南省曲靖市富源县墨红镇XXX，XXXX，01234567890">/getinfo?text=云南省曲靖市富源县墨红镇XXX，XXXX，01234567890</a></p>
+      <p>2、已GET类型请求<a href="getinfo">getinfo</a>传入一个text作为参数！示例：<a href="getinfo?text=云南省曲靖市富源县墨红镇XXX，XXXX，01234567890">/getinfo?text=云南省曲靖市富源县墨红镇XXX，XXXX，01234567890</a></p>
       <p>3、返回数据为：{"name": "XXXX", "phone": "01234567890", "address": "云南省曲靖市富源县墨红镇XXX", "pro": "云南", "city": "曲靖"}</p>
       <table>
         <tr>
